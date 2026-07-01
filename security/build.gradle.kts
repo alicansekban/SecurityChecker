@@ -50,13 +50,14 @@ dependencies {
 }
 
 // JitPack publishing: consumers depend on this module as
-// `com.github.alicansekban.securitychecker:security:<tag>` once a GitHub release/tag is built.
+// `com.github.alicansekban.SecurityChecker:security:<tag>` once a GitHub release/tag is built.
+// groupId must match `com.github.<owner>.<repo>` exactly (case-sensitive) or JitPack returns "not found".
 afterEvaluate {
     publishing {
         publications {
             register<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.github.alicansekban.securitychecker"
+                groupId = "com.github.alicansekban.SecurityChecker"
                 artifactId = "security"
                 version = project.version.toString()
             }
