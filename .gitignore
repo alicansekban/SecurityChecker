@@ -1,15 +1,29 @@
-*.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
+# Gradle
+.gradle/
+build/
 /captures
 .externalNativeBuild
 .cxx
+
+# Android / build artifacts
+*.iml
+*.apk
+*.aab
+*.ap_
+*.dex
+*.class
+/local.properties
 local.properties
+
+# Keystore / signing
+*.jks
+*.keystore
+
+# IntelliJ IDEA / Android Studio (all IDE-generated files: gradle.xml, misc.xml, workspace.xml, etc.)
+.idea/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
